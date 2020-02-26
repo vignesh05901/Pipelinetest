@@ -5,17 +5,17 @@ node{
     }
   stage('Clean'){
   // Get Maven home path
-    sh "${mvnHome}/bin/mvn clean"
+    bat "${mvnHome}/bin/mvn clean"
   
   }
-    stage('Verify'){
+   stage('Verify'){
   // Get Maven home path
-    sh "${mvnHome}/bin/mvn verify"
+    bat "${mvnHome}/bin/mvn verify"
   
   }
     stage('Package'){
   // Get Maven home path
-    sh "${mvnHome}/bin/mvn package"
+    bat "${mvnHome}/bin/mvn package"
   
   }
 }
